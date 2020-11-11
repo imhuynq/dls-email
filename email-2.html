@@ -93,7 +93,7 @@
   <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;height: 100% !important;">      
     <body style='font-family: Arial, Helvetica, sans-serif;'>    
       <tr>        
-        <td align="center" style=" font-size: 0.875rem !important; background: #e0e0e0 !important;" valign="center">          
+        <td align="center" style=" font-size: 1rem !important; background: #e0e0e0 !important;" valign="center">          
           <table class="body" style="width: 100% !important; width: 685px !important; border-spacing: 0; border-collapse: collapse;">            
             <tr>              
               <td align="center" style="background: #F2F2F6 !important; height: 65px" valign="center" class='mobile-logo'>                
@@ -114,7 +114,7 @@
                             Hi
                             <strong style="color: #6170f7;">{{ event.BillingAddress.FirstName }},</strong>
                           </p>
-                          <p class="mobile-18 mobile-lh-22" style="margin: 0 !important; margin-bottom: 10px !important;text-align: center">                            
+                          <p class="mobile-18 mobile-lh-22" style="margin: 0 !important; margin-bottom: 10px !important;text-align: center;line-height: 26px;color: #3a3a3a !important;">                            
                             <br/>
                             You Left Some Awesome Items In Your Cart!<br/> Get them before they’re gone!<br/>Complete your order now and get<strong> {{ event.DiscountEmailSecond.value }} OFF</strong>
                           </p>
@@ -155,7 +155,7 @@
                               <div class='mobile-16 mobile-lh-30' style="margin-bottom: 10px !important;  font-size: 1.125rem; line-height: 1.075rem; color: #282364 !important; font-weight: bold !important;">
                                 {{ item.ProductName }}
                               </div>
-                              <div style="margin-top: 3px !important;  font-size: 0.875rem !important; line-height: 1.075rem !important; color: #72849C !important;">
+                              <div style="margin-top: 3px !important;  font-size: 1rem !important; line-height: 1.075rem !important; color: #72849C !important;">
                                 {{ item.Options }}
                               </div>
                               <div class='mobile-10 mobile-lh-30' style="margin-top: 3px !important;  font-size: 1rem; line-height: 1.35rem; color: #72849C !important;">
@@ -177,39 +177,39 @@
 <!--Subtotal - Begin-->
                   <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;border-top-width: 1px !important; border-top-color: #E0E0E0 !important; border-top-style: dashed !important;">                    
                     <tr>                      
-                      <td class="mobile-16" style="color: #282364 !important;  font-size: 0.875rem; padding: 20px 0 5px 0 !important;">
+                      <td class="mobile-16" style="color: #282364 !important;  font-size: 1rem; padding: 20px 0 5px 0 !important;">
                         Subtotal:
                       </td>
-                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 0.875rem; padding: 20px 0 5px 0 !important;">
+                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 1rem; padding: 20px 0 5px 0 !important;">
                         {{ event.SubTotalPrice }}
                       </td>
                     </tr>
                     {% for discount in event.DiscountData.item %}
                     <tr>                      
-                      <td class="mobile-16" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
+                      <td class="mobile-16" style="color: #282364 !important;  font-size: 1rem; padding: 5px 0 !important;">
                         Promo Code:
                         <span style="color: #FF5C00 !important;">{{ discount.discount_code }}</span>
                       </td>
-                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
+                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 1rem; padding: 5px 0 !important;">
                         {{ discount.discount_price_currency }}
                       </td>
                     </tr>
                     {% endfor %}<!--Loop item - End-->
                     {% if event.BuyDesign.price and event.BuyDesign.price != 0 %}
                     <tr>                      
-                      <td class="mobile-16" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
+                      <td class="mobile-16" style="color: #282364 !important;  font-size: 1rem; padding: 5px 0 !important;">
                         Digital Image: ( {{ event.BuyDesign.count }} Design{% if event.BuyDesign.count != 1 %}s{% endif %} ):
                       </td>
-                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
+                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 1rem; padding: 5px 0 !important;">
                         {{ event.BuyDesign.price }}
                       </td>
                     </tr>
                     {% endif %}
                     <tr>                      
-                      <td class="mobile-16" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
+                      <td class="mobile-16" style="color: #282364 !important;  font-size: 1rem; padding: 5px 0 !important;">
                         Shipping:
                       </td>
-                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
+                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 1rem; padding: 5px 0 !important;">
                         {{ event.ShippingPrice }}
                       </td>
                     </tr>
@@ -227,10 +227,10 @@
                     </tr>
                     {% if event.DiscountValue != 0 %}
                     <tr>                      
-                      <td class="mobile-16" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
+                      <td class="mobile-16" style="color: #282364 !important;  font-size: 1rem; padding: 5px 0 !important;">
                         You saved
                       </td>
-                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
+                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 1rem; padding: 5px 0 !important;">
                         {{ event.DiscountValue }} USD
                       </td>
                     </tr>
@@ -253,7 +253,7 @@
                   </table>
 <!--Total - End-->
 <!--Footer Begin-->
-                  <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;border-top-width: 1px !important; border-top-color: #E0E0E0 !important; border-top-style: solid !important; margin-top: 30px !important">                    
+                  <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;border-top-width: 1px !important; border-top-color: #E0E0E0 !important; border-top-style: dashed !important; margin-top: 30px !important">                    
                     <tr>                      
                       <td style="padding: 20px 0 !important">                        
                         <div class='mobile-12 mobile-lh-30' style="text-align: center !important; font-size: 0.75rem; line-height: 1.075rem; color: #AEB2BF !important">
