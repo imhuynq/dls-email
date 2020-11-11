@@ -5,6 +5,26 @@
     </title>
     <meta content="width=device-width" name="viewport"/>
     <style>
+        html{font-size:16px;}
+        @media only screen and (max-width: 600px){
+          .mobile-24 {font-size: 48px !important;margin-bottom: 50px !important;}
+          .mobile-18 {font-size: 36px !important;}
+          .mobile-16 {font-size: 32px !important;}
+          .mobile-12 {font-size: 24px !important;}
+          .mobile-10 {font-size: 20px !important;}
+          .mobile-logo {
+              height: 118px !important;
+          }
+          .mobile-logo img {
+              width: 226px;
+              max-height: none !important;
+          }
+          .mobile-lh-22 {line-height:51px !important}
+          .mobile-lh-30 {line-height:35px !important}
+          .mobile-btn {padding: 28px 98px !important;}
+          .mobile-product-img {width: 212px !important;}
+          .mobile-discount-code { padding: 29px 92px !important;}
+        }
         body {
             margin: 0;
         }
@@ -70,13 +90,13 @@
         }
     </style>
   </head>
-  <body>    
-    <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;height: 100% !important;">      
+  <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;height: 100% !important;">      
+    <body style='font-family: Arial, Helvetica, sans-serif;'>    
       <tr>        
-        <td align="center" style="font-family: arial, -apple-system !important; font-size: 0.875rem !important; background: #e0e0e0 !important;" valign="center">          
-          <table class="body" style="width: 100% !important; width: 600px !important; border-spacing: 0; border-collapse: collapse;">            
+        <td align="center" style=" font-size: 0.875rem !important; background: #e0e0e0 !important;" valign="center">          
+          <table class="body" style="width: 100% !important; width: 685px !important; border-spacing: 0; border-collapse: collapse;">            
             <tr>              
-              <td align="center" style="background: #f7f8fc !important; height: 65px !important" valign="center">                
+              <td align="center" style="background: #F2F2F6 !important; height: 65px" valign="center" class='mobile-logo'>                
                 <img alt="" data-index="0" src="{{ event.store.logo_url }}" style="display:block;border:0;outline:none;height:auto;max-height:40px"/>
               </td>
             </tr>
@@ -86,19 +106,17 @@
                   <table style="margin-bottom: 15px !important;border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;">                    
                     <tr>                      
                       <td>                        
-                        <div style="margin-top: 30px !important; line-height: 1rem !important; color: #282364 !important;text-align: center !important">                          
-                          <div style="font-family: arial, -apple-system !important; font-size: 1.765rem !important; color: #282364 !important; line-height: 1 !important; margin-bottom: 20px !important; padding: 0 !important; text-align: center !important;text-align: center">
-                            Here's A Massive Gift From Us, Expiring Soon!
+                        <div style="margin-top: 30px !important; line-height: 1rem !important; color: #3a3a3a !important;text-align: center !important">                          
+                          <div class='mobile-24' style=" font-size: 1.5rem; color: #3a3a3a !important; line-height: 1 !important; margin-bottom: 20px !important; padding: 0 !important; text-align: center !important;text-align: center;font-weight: bold;">
+                            OMG!
                           </div>
-                          <p style="margin: 0 !important; margin-bottom: 10px !important; font-size: 1.265rem !important">
+                          <p class='mobile-18' style="margin: 0 !important; margin-bottom: 10px !important; font-size: 1.125rem;color: #3a3a3a !important;">
                             Hi
-                            <strong>{{ event.BillingAddress.FirstName }}</strong>,
+                            <strong style="color: #6170f7;">{{ event.BillingAddress.FirstName }},</strong>
                           </p>
-                          <p style="margin: 0 !important; margin-bottom: 10px !important;text-align: center">                            
+                          <p class="mobile-18 mobile-lh-22" style="margin: 0 !important; margin-bottom: 10px !important;text-align: center">                            
                             <br/>
-                            Your shopping cart is still saved for a few more hours. And we know how much you&rsquo;re going to love our products so we have a massive GIFT for you :)
-                            <br/>
-                            Use this discount code upon checkout for {{ event.DiscountEmailSecond.value }} discount, but hurry because this offer will expire!
+                            You Left Some Awesome Items In Your Cart!<br/> Get them before they’re gone!<br/>Complete your order now and get<strong> {{ event.DiscountEmailSecond.value }} OFF</strong>
                           </p>
                         </div>
                       </td>
@@ -107,39 +125,40 @@
                   <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;">                    
                     <tr>                      
                       <td style="padding: 20px !important; text-align: center !important; background-image: url('https://d3k81ch9hvuctc.cloudfront.net/company/Ttvxxe/images/42fad029-2c6a-422c-a9b6-7eb6788d55f2.png') !important; background-repeat: no-repeat !important; background-position: center center !important; background-size: cover !important; border-radius: 10px !important;">                        
-                        <div style="font-family: arial, -apple-system !important; font-size: 0.875rem !important; line-height: 1rem !important;font-size: 1rem !important; line-height: 1.1875rem !important; color: #fff !important;">
+                        <div class='mobile-10' style="line-height: 1rem !important;font-size: 1rem; line-height: 1.1875rem !important; color: #fff !important;">
                           Discount
                         </div>
-                        <div style="font-family: arial, -apple-system !important; font-size: 0.875rem !important; line-height: 1rem !important;font-size: 3.125rem !important; line-height: 3.8125rem !important; color: #fff !important;">
+                        <div style="line-height: 1rem !important;font-size: 3.125rem !important; line-height: 3.8125rem !important; color: #fff !important;">
                           {{ event.DiscountEmailSecond.value }} OFF
                         </div>
-                        <div style="font-family: arial, -apple-system !important; font-size: 0.875rem !important; line-height: 1rem !important;font-size: 1.25rem !important; line-height: 1.5rem !important; padding: 8px !important; color: #fff !important; border: 1px dashed !important; border-radius: 20px !important; max-width: 300px !important; margin: auto !important;">
+                        <div class='mobile-18 mobile-discount-code' style="line-height: 1rem !important;font-size: 1.25rem; line-height: 1.5rem; padding: 8px 92px; color: #fff !important; border: 1px dashed !important; border-radius: 20px !important; display:inline-block; margin: auto !important;">
                           {{ event.DiscountEmailSecond.code }}
                         </div>
-                        <div style="font-family: arial, -apple-system !important; font-size: 0.875rem !important; line-height: 1rem !important;line-height: 1.0625rem !important; color: #fff !important; margin-top: 14px !important;">
+                        <div class='mobile-10' style="line-height: 1rem !important;line-height: 1.0625rem !important; color: #fff !important; margin-top: 14px !important;">
                           {{ event.DiscountEmailSecond.expire_time }}
                         </div>
                       </td>
                     </tr>
+                    <tr><td style="padding: 8px 0px !important;border-bottom: 1px dashed #E0E0E0 ;"></td></tr>
                   </table>
 <!--Loop item - Begin-->
                   {% for item in event.Items %}
-                  <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;border: 1px solid #F2F2F2 !important; margin-bottom: 30px !important;">                    
+                  <table style="border-spacing: 0 !important; width: 100% !important;border: 1px solid #D2D2D2 !important; margin-bottom: 30px !important;margin-top: 16px !important;border-radius: 10px !important;">                    
                     <tr>                      
                       <td style="padding: 20px !important">                        
                         <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;">                          
                           <tr>                            
                             <td style="width: 30% !important">                              
-                              <img src="{{ item.ImageURL }}" style="display: block !important; width: 100% !important"/>
+                              <img src="{{ item.ImageURL }}" style="display: block !important; width: 144px" class='mobile-product-img'/>
                             </td>
                             <td style="padding-left: 20px !important" valign="top">                              
-                              <div style="margin-bottom: 10px !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; line-height: 1.075rem !important; color: #282364 !important; font-weight: bold !important;">
+                              <div class='mobile-16 mobile-lh-30' style="margin-bottom: 10px !important;  font-size: 1.125rem; line-height: 1.075rem; color: #282364 !important; font-weight: bold !important;">
                                 {{ item.ProductName }}
                               </div>
-                              <div style="margin-top: 3px !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; line-height: 1.075rem !important; color: #72849C !important;">
+                              <div style="margin-top: 3px !important;  font-size: 0.875rem !important; line-height: 1.075rem !important; color: #72849C !important;">
                                 {{ item.Options }}
                               </div>
-                              <div style="margin-top: 3px !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; line-height: 1.075rem !important; color: #72849C !important;">
+                              <div class='mobile-10 mobile-lh-30' style="margin-top: 3px !important;  font-size: 1rem; line-height: 1.35rem; color: #72849C !important;">
                                 SKU: {{ item.SKU }}
                               </div>
                             </td>
@@ -148,7 +167,7 @@
                       </td>
                     </tr>
                     <tr>                      
-                      <td align="right" style="background: #F6F6F9 !important; padding: 20px !important">
+                      <td class='mobile-12' align="right" style="background: #F6F6F9 !important; padding: 20px !important;border-bottom-left-radius: 10px !important;border-bottom-right-radius: 10px;">
                         {{ item.Quantity }} {% if item.PersonalizedIdx == 1 %} pcs {% endif %} x
                         <strong>{{ item.ItemPrice }}</strong>
                       </td>
@@ -158,39 +177,39 @@
 <!--Subtotal - Begin-->
                   <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;border-top-width: 1px !important; border-top-color: #E0E0E0 !important; border-top-style: dashed !important;">                    
                     <tr>                      
-                      <td style="color: #282364 !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; padding: 20px 0 5px 0 !important;">
+                      <td class="mobile-16" style="color: #282364 !important;  font-size: 0.875rem; padding: 20px 0 5px 0 !important;">
                         Subtotal:
                       </td>
-                      <td align="right" style="color: #282364 !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; padding: 20px 0 5px 0 !important;">
+                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 0.875rem; padding: 20px 0 5px 0 !important;">
                         {{ event.SubTotalPrice }}
                       </td>
                     </tr>
                     {% for discount in event.DiscountData.item %}
                     <tr>                      
-                      <td style="color: #282364 !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; padding: 5px 0 !important;">
+                      <td class="mobile-16" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
                         Promo Code:
                         <span style="color: #FF5C00 !important;">{{ discount.discount_code }}</span>
                       </td>
-                      <td align="right" style="color: #282364 !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; padding: 5px 0 !important;">
+                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
                         {{ discount.discount_price_currency }}
                       </td>
                     </tr>
                     {% endfor %}<!--Loop item - End-->
                     {% if event.BuyDesign.price and event.BuyDesign.price != 0 %}
                     <tr>                      
-                      <td style="color: #282364 !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; padding: 5px 0 !important;">
+                      <td class="mobile-16" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
                         Digital Image: ( {{ event.BuyDesign.count }} Design{% if event.BuyDesign.count != 1 %}s{% endif %} ):
                       </td>
-                      <td align="right" style="color: #282364 !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; padding: 5px 0 !important;">
+                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
                         {{ event.BuyDesign.price }}
                       </td>
                     </tr>
                     {% endif %}
                     <tr>                      
-                      <td style="color: #282364 !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; padding: 5px 0 !important;">
+                      <td class="mobile-16" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
                         Shipping:
                       </td>
-                      <td align="right" style="color: #282364 !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; padding: 5px 0 !important;">
+                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
                         {{ event.ShippingPrice }}
                       </td>
                     </tr>
@@ -199,31 +218,31 @@
 <!--Total - Begin-->
                   <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;border-top-width: 1px !important; border-top-color: #E0E0E0 !important; border-top-style: dashed !important; margin: 15px 0 !important">                    
                     <tr>                      
-                      <td style="font-family: arial, -apple-system !important; font-size: 1.125rem !important; color: #282364 !important; font-weight: bold !important; padding: 20px 0 5px 0 !important;">
+                      <td class="mobile-18" style=" font-size: 1.125rem; color: #282364 !important; font-weight: bold !important; padding: 20px 0 5px 0 !important;">
                         Total:
                       </td>
-                      <td align="right" style="font-family: arial, -apple-system !important; font-size: 1.125rem !important; color: #282364 !important; font-weight: bold !important; padding: 20px 0 5px 0 !important;">
+                      <td class="mobile-18" align="right" style=" font-size: 1.125rem; color: #282364 !important; font-weight: bold !important; padding: 20px 0 5px 0 !important;">
                         {{ event.TotalPrice }}
                       </td>
                     </tr>
                     {% if event.DiscountValue != 0 %}
                     <tr>                      
-                      <td style="color: #282364 !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; padding: 5px 0 !important;">
+                      <td class="mobile-16" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
                         You saved
                       </td>
-                      <td align="right" style="color: #282364 !important; font-family: arial, -apple-system !important; font-size: 0.875rem !important; padding: 5px 0 !important;">
+                      <td class="mobile-16" align="right" style="color: #282364 !important;  font-size: 0.875rem; padding: 5px 0 !important;">
                         {{ event.DiscountValue }} USD
                       </td>
                     </tr>
                     {% endif %}
                   </table>
-                  <table class="body" style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;max-width: 200px !important; margin-top: 30px !important; margin-bottom: 30px !important">                    
+                  <table class="body" style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;margin-top: 30px !important; margin-bottom: 30px !important">                    
                     <tr>                      
                       <td align="center" valign="center">                        
-                        <table class="button main-action-cell" style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;">                          
+                        <table class="button main-action-cell" style="border-spacing: 0 !important; border-collapse: collapse !important;">                          
                           <tr>                            
-                            <td align="center" style="cursor: pointer !important; border-radius: 4px !important; background: #25C38C !important;">                              
-                              <a href="{{ event.CartUrl }}" style="cursor: pointer !important; font-size: 0.875rem !important; line-height: 0.875rem !important; display: block !important; color: #fff !important; padding: 12px 30px !important;">
+                            <td align="center">                              
+                              <a href="{{ event.CartUrl }}" style="cursor: pointer !important; border-radius: 8px !important;background: #70BE54 !important;box-sizing: border-box;font-weight:bold;text-decoration:none; cursor:pointer; font-size:1.125rem; display:inline-block; color:#fff; padding:12px 35px" class='mobile-18 mobile-btn'>
                                                         Complete Your Order
                                                     </a>
                             </td>
@@ -237,21 +256,21 @@
                   <table style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;border-top-width: 1px !important; border-top-color: #E0E0E0 !important; border-top-style: solid !important; margin-top: 30px !important">                    
                     <tr>                      
                       <td style="padding: 20px 0 !important">                        
-                        <div style="text-align: center !important; font-size: 0.75rem !important; line-height: 1.075rem !important; color: #AEB2BF !important">
+                        <div class='mobile-12 mobile-lh-30' style="text-align: center !important; font-size: 0.75rem; line-height: 1.075rem; color: #AEB2BF !important">
                           If you have any questions or need any help, don't hesitate to contact me directly at
-                          <a href="mailto:{{ event.store.support_email }}" style="color: #2f80ed !important; font-family: arial, -apple-system !important; font-size: 0.75rem !important; line-height: 1.075rem !important; text-decoration: underline !important">
+                          <a class='mobile-12' href="mailto:{{ event.store.support_email }}" style="color: #2f80ed !important;  font-size: 0.75rem; line-height: 1.075rem !important; text-decoration: underline !important">
                                                 {{ event.store.support_email }}
                                             </a>
                         </div>
-                        <div style="text-align: center !important; font-size: 0.75rem !important; line-height: 1.075rem !important; color: #AEB2BF !important; margin-top: 5px !important;">                          <br/>
+                        <div class='mobile-12 mobile-lh-30' style="text-align: center !important; font-size: 0.75rem; line-height: 1.075rem; color: #AEB2BF !important; margin-top: 5px !important;">                          <br/>
                           P.S: You are receving this newsletter because you subscribed to our mailing list
                                             via:
-                          <a href="{{ event.store.url }}" style="color: #2f80ed !important; font-family: arial, -apple-system !important; font-size: 0.75rem !important; line-height: 1.075rem !important; text-decoration: underline !important" target="_blank">{{ event.store.name }}</a>
+                          <a class='mobile-12' href="{{ event.store.url }}" style="color: #2f80ed !important;  font-size: 0.75rem; line-height: 1.075rem; text-decoration: underline !important" target="_blank">{{ event.store.name }}</a>
                         </div>
-                        <div style="text-align: center !important; font-size: 0.75rem !important; line-height: 1.075rem !important; color: #AEB2BF !important; margin-top: 5px !important;">
+                        <div class='mobile-12 mobile-lh-30' style="text-align: center !important; font-size: 0.75rem; line-height: 1.075rem; color: #AEB2BF !important; margin-top: 5px !important;">
                           {% unsubscribe %}
                                             |
-                          <a href="{{ event.store.faq_url }}" style="text-align: center !important; font-size: 0.75rem !important; line-height: 1.075rem !important; color: #AEB2BF !important" target="_blank">Visit FAQ</a>
+                          <a class='mobile-12' href="{{ event.store.faq_url }}" style="text-align: center !important; font-size: 0.75rem; line-height: 1.075rem; color: #AEB2BF !important" target="_blank">Visit FAQ</a>
                         </div>
                       </td>
                     </tr>
