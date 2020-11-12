@@ -20,11 +20,10 @@
                 width: 104px;
                 max-height: none !important;
             }
-            .mobile-lh-22 {line-height:15px !important}
+            .mobile-lh-22 {line-height:25px !important}
             .mobile-lh-30 {line-height:15px !important}
-            .mobile-btn {padding: 28px 98px !important;}
             .mobile-product-img {width: 109px !important;}
-            .mobile-discount-code { padding: 29px 92px !important;}
+            .mobile-discount-code { padding: 17px 30px !important;}
         }
         body {
             margin: 0;
@@ -107,7 +106,7 @@
                   <table style="margin-bottom: 15px !important;border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;">                    
                     <tr>                      
                       <td>                        
-                        <div style="margin-top: 30px !important; line-height: 1rem !important; color: #3a3a3a !important;text-align: center !important">                          
+                        <div style="line-height: 1rem !important; color: #3a3a3a !important;text-align: center !important">                          
                           <div class="mobile-24" style=" font-size: 1.5rem; color: #3a3a3a !important; line-height: 1 !important; margin-bottom: 20px !important; padding: 0 !important; text-align: center !important;text-align: center;font-weight: bold;">
                             OMG!
                           </div>
@@ -131,7 +130,7 @@
                         <div style="line-height: 1rem !important;font-size: 3.125rem !important; line-height: 3.8125rem !important; color: #fff !important;">
                           {{ event.DiscountEmailSecond.value }} OFF
                         </div>
-                        <div class="mobile-18 mobile-discount-code" style="line-height: 1rem !important;font-size: 1.25rem; line-height: 1.5rem; padding: 8px 92px; color: #fff !important; border: 1px dashed !important; border-radius: 20px !important; display:inline-block; margin: auto !important;">
+                        <div class="mobile-18 mobile-discount-code" style="width:100%;box-sizing:border-box;max-width:327px;white-space: nowrap;line-height: 1rem !important;font-size: 1.25rem; line-height: 1.5rem; padding: 8px 0px; color: #fff !important; border: 1px dashed !important; border-radius: 20px !important; display:inline-block; margin: auto !important;">
                           {{ event.DiscountEmailSecond.code }}
                         </div>
                         <div class="mobile-10" style="line-height: 1rem !important;line-height: 1.0625rem !important; color: #fff !important; margin-top: 14px !important;">
@@ -160,7 +159,7 @@
                               <div style="margin-top: 3px !important;  font-size: 1rem !important; line-height: 1.075rem !important; color: #72849C !important;">
                                 {{ item.Options }}
                               </div>
-                              <div class="mobile-10 mobile-lh-30" style="margin-top: 3px !important;  font-size: 1rem; line-height: 1.35rem; color: #72849C !important;">
+                              <div class="mobile-10 mobile-lh-30" style="word-break: break-all;margin-top: 3px !important;  font-size: 1rem; line-height: 1.35rem; color: #72849C !important;">
                                 SKU: {{ item.SKU }}
                               </div>
                             </td>
@@ -257,20 +256,36 @@
                       </td>
                     </tr>
                   </table>
-                  <table class="body" style="border-spacing: 0 !important; border-collapse: collapse !important; width: 100% !important;margin-top: 30px !important; margin-bottom: 30px !important">                    
+                  <table class="body" style="border-spacing: 0 !important; border-collapse: collapse !important;margin-top: 30px !important; margin-bottom: 30px !important">                    
                     <tr>                      
                       <td align="center" valign="center">                        
-                        <table class="button main-action-cell" style="border-spacing: 0 !important; border-collapse: collapse !important;">                          
+                        <table class="button main-action-cell" style="border-spacing: 0 !important; border-collapse: collapse !important;height: 50px;width: 260px;">                          
                           <tr>                            
-                            <td align="center">
+                            <td align="center" style='cursor: pointer !important; border-radius: 8px !important; background-color: #70be54;'>
                               {% if event.DiscountData.price_without_format &gt; event.DiscountData.price_second_without_format %}
-                              <a class="mobile-18 mobile-btn" href="{{ event.CartUrl }}" style="cursor: pointer !important; border-radius: 8px !important;background: #70BE54 !important;box-sizing: border-box;font-weight:bold;text-decoration:none; cursor:pointer; font-size:1.125rem; display:inline-block; color:#fff; padding:12px 35px">
-                                                            Complete Your Order
-                                                        </a>
+                              <table style='width: 100%;'>
+                                <tbody>
+                                    <tr>
+                                        <td style='text-align: center;'>
+                                            <a href="{{ event.CartUrl }}" style="display:block;line-height:50px;font-weight:bold;text-decoration:none;font-size: 1.125rem;color:#fff;" target="_blank">
+                                                Complete Your Order
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                              </table>
                               {% else %}
-                              <a class="mobile-18 mobile-btn" href="{{ event.CartUrlDiscountCode }}" style="cursor: pointer !important; border-radius: 8px !important;background: #70BE54 !important;box-sizing: border-box;font-weight:bold;text-decoration:none; cursor:pointer; font-size:1.125rem; display:inline-block; color:#fff; padding:12px 35px">
-                                                            Complete Your Order
-                                                        </a>
+                              <table style='width: 100%;'>
+                                <tbody>
+                                    <tr>
+                                        <td style='text-align: center;'>
+                                            <a href="{{ event.CartUrlDiscountCode }}" style="display:block;line-height:50px;font-weight:bold;text-decoration:none;font-size: 1.125rem;color:#fff;" target="_blank">
+                                                Complete Your Order
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                              </table>
                               {% endif %}
                             </td>
                           </tr>
